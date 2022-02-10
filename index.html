@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandon animations</title>
+
+    <style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    overflow: hidden;
+    background-color: black;
+}
+
+.container1,.container2,.container3,.container4{
+    max-width: 50%;
+    height:100vh;
+    position: absolute;
+}
+
+.text-box{
+width: 124%;
+position: absolute;
+left: 50px;
+bottom:35%;
+/*margin-top: -200px;*/
+color: aliceblue;
+
+
+}
+
+img{
+    width: 220%;
+    height: 90%;
+animation: zoom-out 3s linear infinite;
+}
+
+@keyframes zoom-out {
+   100%{
+width: 200% ;
+
+    }
+}
+
+h1{
+    font-size: 24px;
+}
+
+.container1{
+    animation: slide1 12s linear infinite;
+}
+.container2{
+    animation: slide2 12s linear infinite;
+}
+
+.container3{
+    animation: slide3 12s linear infinite;
+}
+
+.container4{
+    animation: slide4 12s linear infinite;
+}
+
+
+@keyframes slide1 {
+    0%{
+visibility: visible;
+    }
+        25%{
+visibility: hidden;
+        }
+    50%{
+visibility: hidden;
+    }
+    
+    75%{
+visibility: hidden;
+    }
+    100%{
+visibility: visible;
+    }
+}
+
+@keyframes slide2 {
+    0%{
+visibility: hidden;
+    }
+        25%{
+visibility: hidden;
+        }
+    50%{
+visibility: visible;
+    }
+    
+    75%{
+visibility: hidden;
+    }
+    100%{
+visibility: hidden;
+    }
+}
+
+@keyframes slide3 {
+    0%{
+visibility: hidden;
+    }
+        25%{
+visibility: hidden;
+        }
+    50%{
+visibility: hidden;
+    }
+    
+    75%{
+visibility: visible;
+    }
+    100%{
+visibility: hidden;
+    }
+}
+
+@keyframes slide4 {
+    0%{
+visibility: hidden;
+    }
+        25%{
+visibility: hidden;
+        }
+    50%{
+visibility: hidden;
+    }
+    
+    75%{
+visibility: hidden;
+    }
+    100%{
+visibility: visible;
+    }
+}
+
+nav{
+    display: flex;
+    gap: 1px;
+}
+
+img.icon{
+    height:80px;
+    width: 100px;
+    animation: icon 3s linear infinite;
+margin-bottom: -100px;
+animation: icon 4s linear infinite;
+}
+.icon2{
+    height:80px;
+    width: 100px;
+    animation: icon 3s linear infinite;
+margin-bottom: -100px;
+animation: icon2 3s linear infinite;
+}
+
+@keyframes icon2 
+{
+    0%{
+    width: 200px;
+    }
+    50%{
+       transform: rotate(180deg);
+    }
+    
+    60%{
+        transform: rotate(180deg);
+        padding: 20%;
+     
+    }
+
+
+70%{
+   
+}
+100%{
+    
+}
+    
+}
+
+
+@keyframes icon 
+{
+    0%{
+        transform: translateX(50%);
+    }
+    50%{
+        transform: rotateY(360deg);
+    }
+    
+    60%{
+        width: 50px;
+     
+    }
+
+
+70%{
+    width: 50px;
+}
+100%{
+    width: 50px;
+}
+    
+}
+h1.brandon{
+    position: relative;
+    color:transparent;
+    -webkit-text-stroke: 1px solid rgb(112, 255, 16);
+ 
+}
+
+h1.brandon::before{
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: rgb(237, 0, 245);
+    height: 100%;
+    width:0%;
+    border-right: 2px solid rgb(237, 0, 245);
+    overflow: hidden;
+    animation: key 3s linear infinite;
+  
+}
+
+@keyframes key {
+    40%{
+        
+        width: 58%;
+       color: rgb(255, 0, 76);
+      
+    }
+   
+    70%{
+        width: 58%;
+       color: rgb(255, 0, 76);
+      
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="container1">
+<img src="camera.jpg" alt="photo of a camera">
+
+
+<div class="text-box">
+   
+<h1>OUR BRANDS OF PRODUCT..</h1> 
+  <P>in our shop you can find a variety of
+      different product of brand which are been selected for
+      just for you
+  </P>
+  <br>
+  <nav>
+  <img class="icon" src="icons8-instagram.svg" alt="">
+  <img class="icon" src="icons8-logo-google.svg" alt="">
+</nav>
+   </div>
+
+    </div>
+    
+
+    <div class="container2">
+        <img src="hindi.jpg" alt="earpods">
+        
+        <div class="text-box">
+        <h1>YOUR SATISFACTION IS OUR PRIORITY ..</h1>
+          <P>we have been satisfying our customer from
+              8years to now this make us the best choice..
+          </P>
+        
+           </div>
+        
+            </div>
+
+
+            <div class="container3">
+                <img src="black.jpg" alt="iphone13">
+                
+                <div class="text-box">
+                <h1>NEW TECHNOLOGY..</h1>
+                  <P>Lorem ipsum, dolor   
+                       sit amet consectetur adipisicing elit. Quis
+                      , vero ut aliquid ipsa corporis quas.</P>
+                      <img class="icon2" src="icons8-instagram.svg" alt="">
+
+                    
+                   </div>
+                
+                    </div>
+
+                    <div class="container4">
+                        <img src="white.jpg" alt="">
+                        
+                        <div class="text-box">
+                        <h1 class="brandon" data-text="BRANDON.......">BRANDON..</h1>
+                          <P style="color: rgb(1, 2, 8); font-size: 18px; font-weight: 500;">We have good accesories for all categories be it childrens
+                              or adult .</P>
+                        
+                           </div>
+                        
+                            </div>
+
+
+</body>
+</html>
